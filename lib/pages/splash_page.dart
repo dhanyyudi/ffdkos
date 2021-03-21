@@ -1,5 +1,6 @@
 import 'package:bwa_cozy/theme.dart';
 import 'package:flutter/material.dart';
+import 'home_page.dart';
 
 class SplashPage extends StatelessWidget {
   @override
@@ -55,7 +56,14 @@ class SplashPage extends StatelessWidget {
                     width: 210,
                     height: 50,
                     child: RaisedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => HomePage(),
+                          ),
+                        );
+                      },
                       color: purpleColor,
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(17),
